@@ -25,13 +25,12 @@ List to check if the problem can be solved by DP
 3. Are there repetitive subproblems?
 4. Memorize subproblems
 
-Steps to do
+Steps to do ([ref](https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.))
 1. Find recusive relation
 2. Recursive(top-down)
 3. Recursive +memo (top-down)
 4. Iterative + memo(bottom-up)
 5. Iterative + N variables(bottom-up)
 
-[ref](https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.)
 
 
