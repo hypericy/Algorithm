@@ -1,11 +1,11 @@
 [link](https://leetcode.com/problems/house-robber/)  
-1.Find recusive relation  
+## 1.Find recusive relation  
 Every house robber have two choices (a) rob current house `N` (b) not rob  
 *    if (a) then can't rob previous house. Max profit will be the optimized moves of robbing `N - 2` houses + `N`
 *    if (b) then it will be same value of robbing `N-1` houses  
 rob(N) = Math.max( rob(N - 2) + currentHouseValue, rob(N - 1) )
 
-2. Recursive (top-down)
+## 2. Recursive (top-down)
 ```
 class Solution {
 public:
@@ -19,7 +19,7 @@ public:
     }
 };
 ```
-3. Recursive + memo(top-down)
+## 3. Recursive + memo(top-down)
 ```
 class Solution {
     unordered_map<int,int>hash;
@@ -36,7 +36,7 @@ public:
     }
 };
 ```
-4.Iterative + memo (bottom-up)
+## 4.Iterative + memo (bottom-up)
 ```
 class Solution {
 public:
@@ -55,7 +55,7 @@ public:
 };
 ```
 
-5.Iterative + 2 variables (bottom-up)  
+## 5.Iterative + 2 variables (bottom-up)  
 ```
 class Solution {
 public:
