@@ -6,7 +6,7 @@ Every house robber have two choices (a) rob current house `N` (b) not rob
 rob(N) = Math.max( rob(N - 2) + currentHouseValue, rob(N - 1) )
 
 2. Recursive (top-down)
-<pre>
+```
 class Solution {
 public:
     int rob(vector<int>& nums) {
@@ -18,9 +18,9 @@ public:
         return max(rob(nums,n-2)+nums[n],rob(nums,n-1));
     }
 };
-</pre>
+```
 3. Recursive + memo(top-down)
-<pre>
+```
 class Solution {
     unordered_map<int,int>hash;
 public:
@@ -35,9 +35,9 @@ public:
         return hash[n];
     }
 };
-</pre>
+```
 4.Iterative + memo (bottom-up)
-<pre>
+```
 class Solution {
 public:
     int rob(vector<int>& nums) {
@@ -46,16 +46,17 @@ public:
         int *DP = new int[n+1];
         DP[0] = 0;
         DP[1] = nums[0];
-        for(int i=1;i<n;i++)
+        for(int i=1';i<n;i++)  
         {  
             DP[i+1] = max(DP[i-1]+nums[i],DP[i]);
         }
         return DP[n];
     }
 };
-</pre>
-5. Iterative + 2 variables (bottom-up)
-<pre>
+```
+
+5.Iterative + 2 variables (bottom-up)  
+```
 class Solution {
 public:
     int rob(vector<int>& nums) {
@@ -71,4 +72,4 @@ public:
         return pre1;
     }
 };
-</pre>
+```
