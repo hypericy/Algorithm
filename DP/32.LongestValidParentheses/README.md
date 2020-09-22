@@ -23,9 +23,9 @@ furthurmore, there might be some valid string in front of our closest one
 ```
 therefore, valid(i) = valid(i-1)+2 + valid(i-valid(i-1)-2)
 
-## This problem isn't intuitive to be solved by recursive
+## This problem isn't intuitive to be solved by recursion
 
-## 4. Iterative(down-top)
+## Iterative(down-top)
 ```cpp
 class Solution {
 public:
