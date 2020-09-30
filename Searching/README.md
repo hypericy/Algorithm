@@ -1,9 +1,9 @@
 # Searching
-1. Linear Search
+## 1. Linear Search
 
-2. Binary Search
+## 2. Binary Search
 
-3.BFS
+## 3.BFS
 
     Pros:
       finding shortest path
@@ -11,7 +11,7 @@
     Cons:
       More Memory
 
-4.DFS
+## 4.DFS
 
     Pros:
       less Memory   
