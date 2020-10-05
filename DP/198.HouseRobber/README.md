@@ -46,7 +46,7 @@ public:
         int *DP = new int[n+1];
         DP[0] = 0;
         DP[1] = nums[0];
-        for(int i=1';i<n;i++)  
+        for(int i=1;i<n;i++)  
         {  
             DP[i+1] = max(DP[i-1]+nums[i],DP[i]);
         }
