@@ -1,6 +1,6 @@
 # Data Structure and Algorithm
 This repo is about how to prepare coding interviews. I will introduce and practice some most common Data Structures and Algorithms.  
-Then I will walk you through some Leetcode problem.
+Then I will walk you through some Leetcode problems.
 ## Data Structure
 * Arrays
 * Hash Tables
