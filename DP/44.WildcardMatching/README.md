@@ -13,7 +13,7 @@ if p[j]=='*' :
     return R(i,j-1) or R(i-1,j)
 ```
 ## 2.Recursive (top-down)
-```
+```cpp
 class Solution {
 public:
     bool isMatch(string s, string p) {
@@ -32,7 +32,7 @@ public:
 };
 ```
 ## 3. Recursive + memo(top-down)
-```
+```cpp
 class Solution {
 public:
     unordered_map<int,unordered_map<int,bool>> mem;
@@ -66,7 +66,7 @@ public:
 };
 ```
 ## 4.Iterative + memo (bottom-up)
-```
+```cpp
 class Solution {
 public:
     bool isMatch(string s, string p) {
