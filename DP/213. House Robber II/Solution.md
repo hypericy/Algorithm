@@ -25,5 +25,25 @@ public:
 };
 ```
 # DP buttom-up
-
+```cpp
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        if(nums.size()==1) return nums[0];
+        return max(robber(nums,0,nums.size()-1),robber(nums,1,nums.size()));
+    }
+private:
+    int robber(vector<int>&nums,int l,int r)
+    {
+        int pre=0,cur=0;
+        for(int i=l;i<r;i++)
+        {
+            int temp=max(pre+nums[i],cur);
+            pre=cur;
+            cur=temp;
+        }
+        return cur;
+    }
+};
+```
 
