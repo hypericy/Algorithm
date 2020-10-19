@@ -65,15 +65,15 @@ public:
 ```
 
 ## Backtracking 2
-The idea is each time push back an element after `index`
+The idea is each time push back an element after `index` then update index and recursive again 
 [1,2,3] for example  
-1.index = 0: add `1` [1]
-    1-1. index = 1: add `2` [1,2]
-            1-1-1. index = 2: add `3` [1,2,3]  
-    1-2. index = 1: add `3` [1,3]
-2.index = 0: add `2` [2]
-    2-1. index = 2: add `3` [2,3]
-3.index = 0: add `3` [3]
+1.index = 0: add `1` [1]  
+    1-1. index = 1: add `2` [1,2]  
+            1-1-1. index = 2: add `3` [1,2,3]   
+    1-2. index = 1: add `3` [1,3]  
+2.index = 0: add `2` [2]  
+    2-1. index = 2: add `3` [2,3]  
+3.index = 0: add `3` [3]  
 
             
 ```cpp
