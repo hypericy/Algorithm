@@ -26,4 +26,65 @@ public:
 ```
 **std::vector always makes a copy of whatever is being stored in the vector.
 
-##
+## Backtracking 1
+The idea is that we pass a temporary vector to `index+1` with and without adding `nums[index]`  
+[1,2,3] for example  
+[N,N,N] -> []  
+[N,N,Y] -> [3]  
+[N,Y,N] -> [2]  
+[N,Y,Y] -> [2,3]
+[Y,N,N] -> [1]
+[Y,N,Y] -> [1,3]  
+[Y,Y,N] -> [1,2]...    
+
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+       vector<vector<int>> ans;
+        vector<int> temp={};
+        backtracking(nums,ans,0,temp);
+        return ans;
+    }
+    void backtracking(vector<int>&nums,vector<vector<int>> &ans,int index,vector<int>& temp)
+    {
+        if(index==nums.size())
+        {
+            ans.push_back(temp);
+            return;
+        }
+        backtracking(nums,ans,index+1,temp);
+        temp.push_back(nums[index]);
+        backtracking(nums,ans,index+1,temp);
+        temp.pop_back();
+       
+        return;
+    }
+};
+```
+
+## Backtracking 2
+```cpp
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+       vector<vector<int>> ans;
+        vector<int> temp={};
+        backtracking(nums,ans,0,temp);
+        return ans;
+    }
+    void backtracking(vector<int>&nums,vector<vector<int>> &ans,int index,vector<int>& temp)
+    {
+        ans.push_back(temp);
+        for(int i=index;i<nums.size();i++)
+        {
+            temp.push_back(nums[i]);
+            backtracking(nums,ans,i+1,temp);
+            temp.pop_back();
+        }
+        return;
+    }
+};
+```
+ 
