@@ -3,7 +3,7 @@
 The idea is Using [1,2,3] for an example, the process is like:  
 1.  Initially, add an empty list `[]`
 2.  add `1` to all the copies of list and push back to the list `[[], [1]]`  
-3.  add `2` to all the copies of list and push back to the list `[[], [1], [2], [1,2]]`
+3.  add `2` to all the copies of list and push back to the list `[[], [1], [2], [1,2]]  
 4.  add `3` to all the copies of list and push back to the list `[[], [1], [2], [1,2], [3], [1,3], [2,3], [1,2,3]]`
 
 ```cpp
@@ -32,8 +32,8 @@ The idea is that we pass a temporary vector to `index+1` with and without adding
 [N,N,N] -> []  
 [N,N,Y] -> [3]  
 [N,Y,N] -> [2]  
-[N,Y,Y] -> [2,3]
-[Y,N,N] -> [1]
+[N,Y,Y] -> [2,3]  
+[Y,N,N] -> [1]  
 [Y,N,Y] -> [1,3]  
 [Y,Y,N] -> [1,2]...    
 
