@@ -3,7 +3,7 @@
 The idea is Using [1,2,3] for an example, the process is like:  
 1.  Initially, add an empty list `[]`
 2.  add `1` to all the copies of list and push back to the list `[[], [1]]`  
-3.  add `2` to all the copies of list and push back to the list `[[], [1], [2], [1,2]]  
+3.  add `2` to all the copies of list and push back to the list `[[], [1], [2], [1,2]]`  
 4.  add `3` to all the copies of list and push back to the list `[[], [1], [2], [1,2], [3], [1,3], [2,3], [1,2,3]]`
 
 ```cpp
