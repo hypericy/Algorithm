@@ -31,5 +31,44 @@ public:
 };
 ```
 # Backtracking
+the idea is each time we push back a element after index then backtrack  
+if enconter the duplicate numbers then skip it  
+```
+subsets([1,2,3,4]) = []
+                     // push(1)
+                     [1, subsets([2,3,4])] // if push N times in subsets([2,3,4]), the pop times is also N, so vec is also [1] after backtrack.
+                     // pop(), push(2)
+                     [2, subsets([3,4])]
+                     // pop(), push(3)
+                     [3, subsets([4])]
+                     // pop(), push(4)
+                     [4, subsets([])]
+                     // pop()
+```
+ Solution:
+```cpp
+class Solution {
+public:
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        vector<vector<int>> ans;
+        vector<int> temp;
+        backtrack(nums,ans,0,temp);
+        return ans;
+    }
+    void backtrack(vector<int>&nums,vector<vector<int>>&ans,int index,vector<int>&temp)
+    {
+        ans.push_back(temp);
+        for(int i=index;i<nums.size();i++)
+        {
+            if(i!=index && nums[i]==nums[i-1]) continue;
+            temp.push_back(nums[i]);
+            backtrack(nums,ans,i+1,temp);
+            temp.pop_back();
+        }
+        return;
+    }
+};
+```
 
 
