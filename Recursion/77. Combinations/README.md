@@ -1,4 +1,4 @@
-link[https://leetcode.com/problems/combinations/]
+[link](https://leetcode.com/problems/combinations/)
 # iterative (too slow)
 The idea is each time select front vector in the queue and add each number behind the last number of the front vector.  
 If the size of new vector is k, push it in the answer vector.Then pop the front vector.  
